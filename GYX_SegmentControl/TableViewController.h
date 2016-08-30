@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UIViewController
-
+@property (nonatomic, assign) NSInteger idx;
+@property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) UIViewController *owner;
 @end

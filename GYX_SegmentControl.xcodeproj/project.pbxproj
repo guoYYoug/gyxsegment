@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E228485E1D6E941400F9AE71 /* UIColor+AddColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E228485D1D6E941400F9AE71 /* UIColor+AddColor.m */; };
 		E22848611D6EE0AF00F9AE71 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22848601D6EE0AF00F9AE71 /* TableViewController.m */; };
+		E254BDA11D758DF60091B1CB /* ddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E254BDA01D758DF60091B1CB /* ddViewController.m */; };
 		E2C249E81D26684000E2572B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C249E71D26684000E2572B /* main.m */; };
 		E2C249EB1D26684000E2572B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C249EA1D26684000E2572B /* AppDelegate.m */; };
 		E2C249EE1D26684000E2572B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C249ED1D26684000E2572B /* ViewController.m */; };
@@ -42,6 +43,8 @@
 		E228485D1D6E941400F9AE71 /* UIColor+AddColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+AddColor.m"; path = "../UIColor+AddColor.m"; sourceTree = "<group>"; };
 		E228485F1D6EE0AF00F9AE71 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		E22848601D6EE0AF00F9AE71 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		E254BD9F1D758DF60091B1CB /* ddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ddViewController.h; sourceTree = "<group>"; };
+		E254BDA01D758DF60091B1CB /* ddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ddViewController.m; sourceTree = "<group>"; };
 		E2C249E31D26684000E2572B /* GYX_SegmentControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYX_SegmentControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C249E71D26684000E2572B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2C249E91D26684000E2572B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				E2C249ED1D26684000E2572B /* ViewController.m */,
 				E228485F1D6EE0AF00F9AE71 /* TableViewController.h */,
 				E22848601D6EE0AF00F9AE71 /* TableViewController.m */,
+				E254BD9F1D758DF60091B1CB /* ddViewController.h */,
+				E254BDA01D758DF60091B1CB /* ddViewController.m */,
 				E2C24A191D26688200E2572B /* GYX_SegmentCon */,
 				E2C249EF1D26684000E2572B /* Main.storyboard */,
 				E2C249F21D26684000E2572B /* Assets.xcassets */,
@@ -294,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C249EE1D26684000E2572B /* ViewController.m in Sources */,
+				E254BDA11D758DF60091B1CB /* ddViewController.m in Sources */,
 				E22848611D6EE0AF00F9AE71 /* TableViewController.m in Sources */,
 				E228485E1D6E941400F9AE71 /* UIColor+AddColor.m in Sources */,
 				E2C249EB1D26684000E2572B /* AppDelegate.m in Sources */,

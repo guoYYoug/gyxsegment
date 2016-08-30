@@ -7,9 +7,12 @@
 //
 
 #import "TableViewController.h"
+#import "ddViewController.h"
+
 
 @interface TableViewController ()<UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) UITableView *table;
+
+
 @end
 
 @implementation TableViewController
@@ -23,7 +26,7 @@
     _table.rowHeight = 50;
     [self.view addSubview:_table];
     [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
+    self.view.backgroundColor = [UIColor purpleColor];
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -31,11 +34,30 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = @"方法反反复复凤飞飞";
+    if (self.idx == 0) {
+       cell.textLabel.text = @"方法反反复复凤飞飞";
+    } else if (self.idx == 1) {
+        cell.textLabel.text = @"嘎嘎嘎嘎嘎嘎";
+    } else if (self.idx == 2) {
+        cell.textLabel.text = @"将军金甲夜不脱";
+    } else if (self.idx == 3) {
+        cell.textLabel.text = @"啪啪啪啪啪啪";
+    } else if (self.idx == 4) {
+        cell.textLabel.text = @"么么么么么么么";
+    } else if (self.idx == 5) {
+        cell.textLabel.text = @"喵喵喵喵密密麻麻";
+    } else if (self.idx == 6) {
+        cell.textLabel.text = @"96666666";
+    } else if (self.idx == 7) {
+        cell.textLabel.text = @"哪里哪里哪里呢";
+    }
+    
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"123");
+    ddViewController *con = [[ddViewController alloc] init];
+    [self.owner.navigationController pushViewController:con animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

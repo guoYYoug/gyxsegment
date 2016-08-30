@@ -203,9 +203,17 @@
     _viewArr = viewArr;
     if (_viewArr.count == _gyx_arr.count) {
         for (NSInteger i = 0; i < viewArr.count; i++) {
-            UIView *viewS = _viewArr[i];
-            viewS.frame = CGRectMake(i * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height - GYX_SEG_HEIGHT);
-            [self.gyxBottomScrollView addSubview:viewS];
+            if ([_viewArr[i] isKindOfClass:[UIView class]]) {
+                UIView *viewS = _viewArr[i];
+                viewS.frame = CGRectMake(i * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height - GYX_SEG_HEIGHT);
+                [self.gyxBottomScrollView addSubview:viewS];
+            } else if ([_viewArr[i] isKindOfClass:[UIViewController class]]) {
+                UIViewController *viewS = _viewArr[i];
+                viewS.view.frame = CGRectMake(i * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height - GYX_SEG_HEIGHT);
+                [self.gyxBottomScrollView addSubview:viewS.view];
+
+            }
+            
         }
     }
     

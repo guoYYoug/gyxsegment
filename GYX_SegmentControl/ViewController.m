@@ -46,13 +46,23 @@
     vid7.backgroundColor = [UIColor purpleColor];
     
     NSArray *arr = @[vid,vid1,vid2, vid3, vid4, vid5, vid6, vid7];
+    NSMutableArray *arrView = [NSMutableArray array];
+    NSArray *arrlist = @[@"开的封", @"反的住宿费反", @"健的身", @"打的开", @"提的高", @"咯的额", @"突的然", @"让的人"];
+    for (NSInteger i = 0; i < arrlist.count; i++) {
+        TableViewController *tableC = [[TableViewController alloc] init];
+        tableC.idx = i;
+        tableC.owner = self;
+        [arrView addObject:tableC];
+        NSLog(@"%ld", i);
+    }
     
-    GYX_SegmentControl *control = [[GYX_SegmentControl alloc] initWithFrame:CGRectMake(0, 70, Screen_Width, 300) segCount:@[@"开的封", @"反的住宿费反", @"健的身", @"打的开", @"提的高", @"咯的额", @"突的然", @"让的人"] isChangeColor:YES];
-    control.viewArr = [NSMutableArray arrayWithArray:arr];
+    GYX_SegmentControl *control = [[GYX_SegmentControl alloc] initWithFrame:CGRectMake(0, 80, Screen_Width, 300) segCount:arrlist isChangeColor:YES];
+    control.viewArr = arrView;//[NSMutableArray arrayWithArray:arr];可以是view数组或者viewcontroller数组,且数量必须与segCount相同
     [control setselColor:[UIColor orangeColor]];
-    [control setTopViewBackgroundColor:[UIColor blackColor]];
+    [control setLineViewBackgroundColor:[UIColor orangeColor]];
+    //[control setTopViewBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:control];
-    [control setBetweenItemViewBackgroundColor:[UIColor blackColor]];
+    //[control setBetweenItemViewBackgroundColor:[UIColor blackColor]];
     
 }
 
