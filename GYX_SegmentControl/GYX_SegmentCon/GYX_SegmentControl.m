@@ -49,7 +49,7 @@
             CGFloat newWid = frame.size.width / _gyx_arr.count;
             
             for (GYX_Item *b in self.gyxScrollView.subviews) {
-                NSInteger idx = b.tag - 100;
+                long idx = b.tag - 100;
                 if ([b isKindOfClass:[GYX_Item class]]) {
                     b.frame = CGRectMake(idx * newWid, 0, newWid, GYX_ITEM_HEIGHT);
                 }
@@ -140,8 +140,8 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.gyxBottomScrollView) {
-        NSInteger idx = self.gyxBottomScrollView.contentOffset.x / self.frame.size.width;
-        NSLog(@"%ld", idx);
+        long idx = self.gyxBottomScrollView.contentOffset.x / self.frame.size.width;
+
         GYX_Item *item = [self.gyxScrollView viewWithTag:idx + 100];
         [UIView animateWithDuration:.5 animations:^{
            self.lineView.frame = CGRectMake(item.frame.origin.x, GYX_ITEM_HEIGHT, item.frame.size.width, LINE_HEIGHT);
